@@ -1,0 +1,7 @@
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/Practica_4.dir
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/edit_cache.dir
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/list_install_components.dir
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/install.dir
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/install/local.dir
+C:/Users/david/OneDrive/Escritorio/Practica_4/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/install/strip.dir
