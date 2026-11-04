@@ -1,9 +1,20 @@
-#include <iostream>
+#include <string>
+#include <map>
+#include <vector>
 
 using namespace std;
-//Practica 4 del laboratorio de Informatica II
-int main()
-{
-    cout << "Hello World!" << endl;
-    return 0;
-}
+
+struct Ruta {
+    int costo;
+    vector<string> camino;
+};
+
+class Enrutador {
+private:
+    string nombre;
+    map<string, int> vecinos;
+    map<string, Ruta> tabla;
+
+public:
+//poner los metofdos eque necesita el enrutados
+};
