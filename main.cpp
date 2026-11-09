@@ -1,6 +1,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -55,6 +56,48 @@ public:
     }
     //Puede que lo mejor sea haacer todas los metodos en bool, para que la verificacion sea mas facil, de un F o un T, para la red.
     //metodos del enrutador completados.
+    //hacer el constructor.
+    Enrutador (const string&){
+        nombre = n;
+    }
+    //hacer el getter del nombre
+    const string& getNombre() const{
+        return nombre;
+    }
+    //getter de los vecinos
+    const map<string, int>& getVecinos() const{
+        return vecinos;
+    }
+    //constructor y getters hechos.
+    //Hay que hacer las funciones de averiguacion de costo de caminos
+    int CousTo(const string& destino)const{
+        auto valor = tabla.find(destino);
+        if (tabla.find(destino) == tabla.end()){
+            return -1;
+        }
+        return valor->second.costo;
+
+    }
+    //averiguar el camino hacia un enrutador
+    vector<string> Wayto(const string& destino)const{
+        auto valor = tabla.find(destino);
+        if (tabla.find(destino) == tabla.end()){
+            return {};
+        }
+        return valor->second.camino;
+    }
+    //Mostar la tabla
+    void mostrarTabla() const{
+        for(const auto& entrada : tabla){
+            cout <<"destinu: "<< entrada.first<<", ";
+            cout <<"costo: "<< entrada.second.costo;
+            for (const auto& paso : entrada.second.camino) {
+                cout << paso << " -- ";
+            }
+            cout << "\n";
+        }
+    }
+    //Metodo de Dijkstra para hacer el calculo de la tabla
 };
 //Definicion de la clase Red
 #include <string>
