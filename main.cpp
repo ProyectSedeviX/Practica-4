@@ -18,7 +18,7 @@ private:
 
 public:
 //poner los metofdos eque necesita el enrutados
-    bool agregarEnlace(const string& vecino, int costo);{
+    bool agregarEnlace(const string& vecino, int costo){
         //desde el enrutador definido en el main, se establece su costo desde el, hasta el vecino.
         if (costo <= 0 || vecino == nombre) {
             return false;
@@ -98,7 +98,72 @@ public:
         }
     }
     //Metodo de Dijkstra para hacer el calculo de la tabla
-};
+    //el valor del enlace debe ser positivo
+            const int Infinite = 1e9;
+
+            void CalcularTablaDijkstra(const map<string, Enrutador>& topologia) {
+                map<string, int> dist;
+                map<string, string> previo;
+                set<pair<int, string>> pq;
+
+                // Parte 1: inicialización
+                for (const auto& entrada : topologia) {
+                    dist[entrada.first] = Infinite;
+                }
+                dist[nombre] = 0;
+                pq.insert({0, nombre});
+
+                // Parte 2: Dijkstra con set
+                while (!pq.empty()) {
+                    auto primero = *pq.begin();      // el de menor distancia
+                    pq.erase(pq.begin());
+                    int d = primero.first;
+                    string u = primero.second;
+
+                    for (const auto& vec : topologia.at(u).getVecinos()) {
+                        const string& v = vec.first;
+                        int peso = vec.second;
+
+                        if (d + peso < dist[v]) {
+                            pq.erase({dist[v], v});  // quitar entrada vieja (valor viejo)
+                            dist[v] = d + peso;
+                            previo[v] = u;
+                            pq.insert({dist[v], v});
+                        }
+                    }
+                }
+
+                // Parte 3: llenar la tabla
+                tabla.clear();
+                for (const auto& entrada : dist) {
+                    if (entrada.second == Infinite) continue;   // inalcanzable
+                    Ruta r;
+                    r.costo = entrada.second;
+                    for (string x = entrada.first; ; x = previo[x]) {
+                        r.camino.push_back(x);
+                        if (x == nombre) break;
+                    }
+                    reverse(r.camino.begin(), r.camino.end());
+                    tabla[entrada.first] = r;
+                }
+            }
+        }
+
+        // Llenar la tabla
+        tabla.clear();
+        for (const auto& entrada : dist) {
+            if (entrada.second == Infinite) continue;   // inalcanzable
+            Ruta r;
+            r.costo = entrada.second;
+            for (string x = entrada.first; ; x = previo[x]) {
+                r.camino.push_back(x);
+                if (x == nombre) break;
+            }
+            reverse(r.camino.begin(), r.camino.end());
+            tabla[entrada.first] = r;
+        }
+    }
+}
 //Definicion de la clase Red
 #include <string>
 #include <map>
