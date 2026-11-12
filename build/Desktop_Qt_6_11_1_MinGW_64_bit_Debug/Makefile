@@ -173,6 +173,30 @@ Practica_4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/build
 .PHONY : Practica_4/fast
 
+enrutador.obj: enrutador.cpp.obj
+.PHONY : enrutador.obj
+
+# target to build an object file
+enrutador.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/enrutador.cpp.obj
+.PHONY : enrutador.cpp.obj
+
+enrutador.i: enrutador.cpp.i
+.PHONY : enrutador.i
+
+# target to preprocess a source file
+enrutador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/enrutador.cpp.i
+.PHONY : enrutador.cpp.i
+
+enrutador.s: enrutador.cpp.s
+.PHONY : enrutador.s
+
+# target to generate assembly for a file
+enrutador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/enrutador.cpp.s
+.PHONY : enrutador.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -210,6 +234,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Practica_4
+	@echo ... enrutador.obj
+	@echo ... enrutador.i
+	@echo ... enrutador.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
