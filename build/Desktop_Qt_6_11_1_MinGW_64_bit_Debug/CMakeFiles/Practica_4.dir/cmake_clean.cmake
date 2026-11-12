@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Practica_4.dir/enrutador.cpp.obj"
+  "CMakeFiles/Practica_4.dir/enrutador.cpp.obj.d"
   "CMakeFiles/Practica_4.dir/main.cpp.obj"
   "CMakeFiles/Practica_4.dir/main.cpp.obj.d"
   "Practica_4.exe"

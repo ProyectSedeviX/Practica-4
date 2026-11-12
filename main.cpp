@@ -1,9 +1,20 @@
-#include <iostream>
+#include "enrutador.h"
 
-using namespace std;
-//Practica 4 del laboratorio de Informatica II
 int main()
 {
-    cout << "Hello World!" << endl;
     return 0;
 }
+//Definicion de la clase Red
+#include <string>
+#include <map>
+#include <vector>
+
+using namespace std;
+
+class Red {
+private:
+    map<string, Enrutador> enrutadores;
+
+public:
+    // Metodos pendientes de los enrutadores
+};

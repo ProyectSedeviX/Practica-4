@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/david/OneDrive/Escritorio/Practica_4/enrutador.cpp" "CMakeFiles/Practica_4.dir/enrutador.cpp.obj" "gcc" "CMakeFiles/Practica_4.dir/enrutador.cpp.obj.d"
   "C:/Users/david/OneDrive/Escritorio/Practica_4/main.cpp" "CMakeFiles/Practica_4.dir/main.cpp.obj" "gcc" "CMakeFiles/Practica_4.dir/main.cpp.obj.d"
   )
 
