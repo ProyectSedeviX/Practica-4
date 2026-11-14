@@ -221,6 +221,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+red.obj: red.cpp.obj
+.PHONY : red.obj
+
+# target to build an object file
+red.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/red.cpp.obj
+.PHONY : red.cpp.obj
+
+red.i: red.cpp.i
+.PHONY : red.i
+
+# target to preprocess a source file
+red.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/red.cpp.i
+.PHONY : red.cpp.i
+
+red.s: red.cpp.s
+.PHONY : red.s
+
+# target to generate assembly for a file
+red.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Practica_4.dir\build.make CMakeFiles/Practica_4.dir/red.cpp.s
+.PHONY : red.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -240,6 +264,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... red.obj
+	@echo ... red.i
+	@echo ... red.s
 .PHONY : help
 
 
